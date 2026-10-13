@@ -1,38 +1,41 @@
-*,
-*::before,
-*::after {
+:root {
+  --text: #000;
+  --secondary-text: #fff;
+  --bg-color: #fff;
+}
+
+* {
   box-sizing: border-box;
 }
 
 body {
-  width: 1100px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 20px 40px;
   font-family: Raleway, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-blockquote {
+ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 a {
-  color: inherit;
+  color: var(--text);
 }
 
-img {
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-button {
-  font: inherit;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
